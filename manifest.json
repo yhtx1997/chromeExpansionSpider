@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+  
+    "name": "爬虫工具",
+    "description": "这是一个简单的爬虫工具",
+    "version": "0.0.1",
+  
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    "devtools_page": "devtools.html",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "notifications"
+    ]
+  }

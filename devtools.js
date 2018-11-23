@@ -1,0 +1,1 @@
+chrome.devtools.panels.create("Spider","","index.html");
