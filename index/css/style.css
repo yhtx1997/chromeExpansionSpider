@@ -1,0 +1,22 @@
+body,div,button,ul,li{
+    padding: 0;
+    margin: 0;
+}
+button{
+    margin: 10px;
+    padding: 0 5px;
+}
+.info{
+    position:fixed;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    border:1px solid #ccc;
+    color: #ccc;
+    padding: 20px;
+
+}
+.parameter{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}

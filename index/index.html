@@ -6,33 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="./js/vue.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/vue.min.js"></script>
 </head>
 
 <body>
     <div id='app'>
-        {{message}}
-        <div>
-            <button>管理</button><button>新建</button>
-        </div>
-        
-        <ul class="new">
-            参数数量：<input type="number" v-model="quantity"><button>确定</button>
-            <template v-for="(item,index) in quantity*1" key='index'>
-                <li>路径片段{{item}}：<input type="text" v-model='path'><br/>
-                参数范围{{item}}：<input type="text" v-model='min'>~<input type="text" v-model='max'></li>
-            </template>
-            <button>提交</button>
+        <div >
+                <button @click="selectClick(0)">新建</button>
+                <button v-show="select" @click="startCilck">开始</button><button v-show="select" @click="deleteCilck">删除</button>
+                 <div v-show="select" class="info">
+                     <ul>
+                         <li v-for='(item,index) in info'>{{item}}</li>
+                     </ul>
+                 </div>
+             </div>
+        <ul v-show="!select" class="new">
+            <!-- 参数数量：<input type="number" v-model="quantity"> -->
+            <li class="parameter" v-for="(item,index) in quantity*1">
+                路径片段{{item}}：<input type="text" ref='path'>
+                参数范围{{item}}：<input type="text" ref='min'>~<input type="text" ref='max'>
+            </li>
+            <button @click="addClick">提交</button>
         </ul>
 
-        <div>
-            <ul>
-                <li></li> <button>开始</button><button>暂停</button><button>结束</button> 
-            </ul>
-            <div style="border:1px solid #ccc;padding: 20px;">
-                <li v-for='(item,index) in info'>{{item}}</li>
-            </div>
-        </div>
+        
 
     </div>
     <script src='./js/index.js'></script>

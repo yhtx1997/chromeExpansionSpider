@@ -1,20 +1,22 @@
 {
-    "manifest_version": 2,
-  
-    "name": "爬虫工具",
-    "description": "这是一个简单的爬虫工具",
-    "version": "0.0.1",
-  
-    "browser_action": {
-      "default_icon": "icon.png",
-      "default_popup": "popup.html"
-    },
-    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-    "permissions": [
-        "http://*/*",
-        "https://*/*",
-        "file:///*"
-     ],
-    "devtools_page": "./index/index.html"
-    
-  }
+  "manifest_version": 2,
+
+  "name": "模拟用户操作",
+  "description": "这是一个简单的脚本工具",
+  "version": "0.0.2",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "file:///*"
+  ],
+  "devtools_page": "./index/index.html",
+  "homepage_url": "https://github.com/yhtx1997"
+}

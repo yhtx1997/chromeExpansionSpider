@@ -1,2 +1,2 @@
 # chromeExpansionSpider
-一个谷歌浏览器扩展爬虫工具
+模拟用户点击操作
